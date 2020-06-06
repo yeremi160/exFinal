@@ -50,3 +50,9 @@ class Desk:
          #resultados
         self.message = Label(text = '', fg = 'Black')
         self.message.grid(row = 3, column = 0, columnspan = 2, sticky = W + E)
+
+        #binariotest
+    def funcion1(self):
+        dia=int(self.pp3.get())
+        mes=int(self.pes4.get())
+        anio=int(self.pap5.get())
