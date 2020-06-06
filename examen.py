@@ -29,7 +29,7 @@ class Desk:
         Label(frame, text = 'APELLIDO: ').grid(row = 2, column = 0)
         self.op2 = Entry(frame)
         self.op2.grid(row = 2, columnspan = 6)
-         #dia
+        #dia
         Label(frame, text = 'DIA: ').grid(row = 3, column = 0)
         self.pp3 = Entry(frame)
         self.pp3.grid(row = 3, columnspan = 6)
@@ -67,9 +67,15 @@ class Desk:
         dia=int(self.pp3.get())
         mes=int(self.pes4.get())
         anio=int(self.pap5.get())
-        fecha_denacimiento = datetime.datetime(anio, mes, dia)
+        fecha_de_nacimiento = datetime.datetime(anio, mes, dia)
         fecha_de_hoy = datetime.datetime.now()
         diferencia = fecha_de_hoy - fecha_de_nacimiento
         dias_vividos = diferencia.days
         self.message['text'] = 'Naciste en: {}/{}/{}: en total has vivido{} dias'.format(dia,mes,anio,dias_vividos)   
-        
+         #par_impar 
+    def funcion3(self):
+        nom=str(self.p1.get())
+        apel=str(self.op2.get())
+        nr_nombre=int(len(nom))
+        nr_apellido=int(len(apel))
+        if nr_nombre%2==0 and nr_apellido %2==0 :
