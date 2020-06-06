@@ -51,8 +51,25 @@ class Desk:
         self.message = Label(text = '', fg = 'Black')
         self.message.grid(row = 3, column = 0, columnspan = 2, sticky = W + E)
 
-        #binariotest
+    #binariotest
     def funcion1(self):
         dia=int(self.pp3.get())
         mes=int(self.pes4.get())
         anio=int(self.pap5.get())
+        bindia=format(dia, '0b' )
+        binmes=format(mes, '0b')
+        binanio=format(anio, '0b')
+
+        self.message['text'] = 'naciste en la fecha: {}/{}/{} tu fecha de nacimiento en binario es :{}/{}/{}'.format(dia,mes,anio,bindia,binmes,binanio)
+      #vidaprueba2
+    def funcion2(self):
+            
+        dia=int(self.pp3.get())
+        mes=int(self.pes4.get())
+        anio=int(self.pap5.get())
+        fecha_denacimiento = datetime.datetime(anio, mes, dia)
+        fecha_de_hoy = datetime.datetime.now()
+        diferencia = fecha_de_hoy - fecha_de_nacimiento
+        dias_vividos = diferencia.days
+        self.message['text'] = 'Naciste en: {}/{}/{}: en total has vivido{} dias'.format(dia,mes,anio,dias_vividos)   
+        
