@@ -88,4 +88,13 @@ class Desk:
             self.message['text'] = '{} {} tu nombre es impar y tu apellido es impar'.format(nom,apel)
              #reves
     def funcion5(self):
-            
+        ns=str(self.p1.get())
+        ad=str(self.op2.get())
+        cadena_invertida = ""
+        cadena_invertida1= ""
+        for letra in ns:
+            cadena_invertida = letra + cadena_invertida
+        for letra1 in ad:
+            cadena_invertida1 = letra1 + cadena_invertida1
+        self.message['text'] = '{} {} tu nombre al reves {} {}'.format(ns,ad,cadena_invertida,cadena_invertida1)
+  
