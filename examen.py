@@ -49,7 +49,7 @@ class Desk:
         Button(frame, text = 'FUNCION 5', command = self.funcion5).grid(row = 6, column = 4 , sticky = W + E)
          #resultados
         self.message = Label(text = '', fg = 'Black')
-        self.message.grid(row = 3, column = 0, columnspan = 2, sticky = W + E)
+        self.message.grid(row = 3, column = 1, columnspan = 2, sticky = W + E)
 
          #binariotest
     def funcion1(self):
@@ -114,4 +114,7 @@ class Desk:
         for letra1 in ad:
             cadena_invertida1 = letra1 + cadena_invertida1
         self.message['text'] = '{} {} tu nombre al reves {} {}'.format(ns,ad,cadena_invertida,cadena_invertida1)
-  
+if __name__ == '__main__':
+    window = Tk()
+    app = Desk(window)
+    window.mainloop()
