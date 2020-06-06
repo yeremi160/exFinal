@@ -41,3 +41,5 @@ class Desk:
         Label(frame, text = 'AÑO: ').grid(row = 5, column = 0)
         self.pap5 = Entry(frame)
         self.pap5.grid(row = 5, columnspan = 6)
+         #botones
+        Button(frame, text = 'FUNCION 1', command = self.funcion1).grid(row = 6, column = 0 , sticky = W + E)
