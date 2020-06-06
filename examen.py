@@ -10,3 +10,4 @@ class Desk:
         
      
         self.wind = window
+        self.wind.geometry(str(ancho)+'x'+str(alto))
