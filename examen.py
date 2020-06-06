@@ -86,3 +86,6 @@ class Desk:
             self.message['text'] = '{} {} tu nombre es impar y tu apellido es par'.format(nom,apel)
         else:
             self.message['text'] = '{} {} tu nombre es impar y tu apellido es impar'.format(nom,apel)
+             #reves
+    def funcion5(self):
+            
