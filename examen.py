@@ -29,3 +29,15 @@ class Desk:
         Label(frame, text = 'APELLIDO: ').grid(row = 2, column = 0)
         self.op2 = Entry(frame)
         self.op2.grid(row = 2, columnspan = 6)
+         #dia
+        Label(frame, text = 'DIA: ').grid(row = 3, column = 0)
+        self.pp3 = Entry(frame)
+        self.pp3.grid(row = 3, columnspan = 6)
+        #mes
+        Label(frame, text = 'MES: ').grid(row = 4, column = 0)
+        self.pes4 = Entry(frame)
+        self.pes4.grid(row = 4, columnspan = 6)
+        #año
+        Label(frame, text = 'AÑO: ').grid(row = 5, column = 0)
+        self.pap5 = Entry(frame)
+        self.pap5.grid(row = 5, columnspan = 6)
