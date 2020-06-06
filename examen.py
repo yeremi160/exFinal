@@ -79,3 +79,10 @@ class Desk:
         nr_nombre=int(len(nom))
         nr_apellido=int(len(apel))
         if nr_nombre%2==0 and nr_apellido %2==0 :
+                self.message['text'] = '{} {} tu nombre es par y tu apellido es par'.format(nom,apel)
+        elif nr_nombre%2==0 and nr_apellido %2==1:
+            self.message['text'] = '{} {} tu nombre es par y tu apellido es impar'.format(nom,apel)
+        elif nr_nombre%2==1 and nr_apellido %2==0:
+            self.message['text'] = '{} {} tu nombre es impar y tu apellido es par'.format(nom,apel)
+        else:
+            self.message['text'] = '{} {} tu nombre es impar y tu apellido es impar'.format(nom,apel)
