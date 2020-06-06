@@ -85,7 +85,22 @@ class Desk:
         elif nr_nombre%2==1 and nr_apellido %2==0:
             self.message['text'] = '{} {} tu nombre es impar y tu apellido es par'.format(nom,apel)
         else:
-            self.message['text'] = '{} {} tu nombre es impar y tu apellido es impar'.format(nom,apel)
+            self.message['text'] = '{} {} tu nombre es impar y tu apellido es impar'.format(nom,apel)   
+          #par_impar 
+    def funcion3(self):
+        nom=str(self.p1.get())
+        apel=str(self.op2.get())
+        nr_nombre=int(len(nom))
+        nr_apellido=int(len(apel))
+        if nr_nombre%2==0 and nr_apellido %2==0 :     
+           
+           
+           
+           
+           
+           
+           
+           
              #reves
     def funcion5(self):
         ns=str(self.p1.get())
