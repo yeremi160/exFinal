@@ -47,3 +47,6 @@ class Desk:
         Button(frame, text = 'FUNCION 3', command = self.funcion3).grid(row = 6, column = 2 , sticky = W + E)
         Button(frame, text = 'FUNCION 4', command = self.funcion4).grid(row = 6, column = 3 , sticky = W + E)
         Button(frame, text = 'FUNCION 5', command = self.funcion5).grid(row = 6, column = 4 , sticky = W + E)
+         #resultados
+        self.message = Label(text = '', fg = 'Black')
+        self.message.grid(row = 3, column = 0, columnspan = 2, sticky = W + E)
