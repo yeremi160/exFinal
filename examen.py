@@ -11,15 +11,15 @@ class Desk:
      
         self.wind = window
         self.wind.geometry(str(ancho)+'x'+str(alto))
- #titulo
+        #titulo
         self.wind.columnconfigure(0, weight=1)
         self.wind.title('EXAMEN FINAL')
         
-#titulo_entrada
+        #titulo_entrada
         frame = LabelFrame(self.wind, text = '')
 
         frame.grid(row = 0, column = 2, columnspan = 20, pady = 20)
-  #nombre
+         #nombre
         Label(frame, text = 'NOMBRE: ').grid(row = 1, column = 0)
        
         self.p1 = Entry(frame)
@@ -51,7 +51,7 @@ class Desk:
         self.message = Label(text = '', fg = 'Black')
         self.message.grid(row = 3, column = 0, columnspan = 2, sticky = W + E)
 
-    #binariotest
+         #binariotest
     def funcion1(self):
         dia=int(self.pp3.get())
         mes=int(self.pes4.get())
@@ -61,7 +61,7 @@ class Desk:
         binanio=format(anio, '0b')
 
         self.message['text'] = 'naciste en la fecha: {}/{}/{} tu fecha de nacimiento en binario es :{}/{}/{}'.format(dia,mes,anio,bindia,binmes,binanio)
-      #vidaprueba2
+         #vidaprueba2
     def funcion2(self):
             
         dia=int(self.pp3.get())
@@ -86,22 +86,24 @@ class Desk:
             self.message['text'] = '{} {} tu nombre es impar y tu apellido es par'.format(nom,apel)
         else:
             self.message['text'] = '{} {} tu nombre es impar y tu apellido es impar'.format(nom,apel)   
-          #par_impar 
-    def funcion3(self):
-        nom=str(self.p1.get())
-        apel=str(self.op2.get())
-        nr_nombre=int(len(nom))
-        nr_apellido=int(len(apel))
-        if nr_nombre%2==0 and nr_apellido %2==0 :     
-           
-           
-           
-           
-           
-           
-           
-           
-             #reves
+
+        #voca_cons
+    def funcion4(self):
+        nr=str(self.p1.get())
+        apd=str(self.op2.get())
+        cuenta = 0
+        for carac in nr:
+            if carac == 'a' or carac =='A' or carac =='e' or carac =='E' or carac =='i' or carac=='I' or carac=='o' or carac=="O" or carac=="u" or carac=="U":
+                cuenta += 1
+        for carac in apd:
+            if carac == 'a' or carac =='A' or carac =='e' or carac =='E' or carac =='i' or carac=='I' or carac=='o' or carac=="O" or carac=="u" or carac=="U":
+                cuenta += 1
+        cud=len(nr)
+        cudd=len(apd)
+        consonante=cud+cudd-cuenta
+
+        self.message['text'] = 'todo tu nombre tiene {} vocales y {} consonantes'.format(cuenta,consonante)
+        #reves
     def funcion5(self):
         ns=str(self.p1.get())
         ad=str(self.op2.get())
